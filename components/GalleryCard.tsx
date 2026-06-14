@@ -60,7 +60,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
           <BreakableJaText text={item.title} />
         </h3>
         {item.description && (
-          <p className="max-h-24 overflow-hidden text-sm leading-7 text-[var(--color-muted)]">
+          <p className="text-sm leading-7 text-[var(--color-muted)]">
             <BreakableJaText text={item.description} />
           </p>
         )}
@@ -78,7 +78,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group block h-[440px] w-full overflow-hidden rounded-2xl border border-white/15 transition hover:border-[var(--color-accent)]"
+          className="group block h-[500px] w-full overflow-hidden rounded-2xl border border-white/15 transition hover:border-[var(--color-accent)]"
         >
           {cardBody}
         </a>
@@ -89,7 +89,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
             setVideoError(false);
             setIsOpen(true);
           }}
-          className="group block h-[440px] w-full overflow-hidden rounded-2xl border border-white/15 text-left transition hover:border-[var(--color-accent)]"
+          className="group block h-[500px] w-full overflow-hidden rounded-2xl border border-white/15 text-left transition hover:border-[var(--color-accent)]"
           aria-label={`${item.title}のデモ動画を開く`}
         >
           {cardBody}
