@@ -1,11 +1,16 @@
-import { Fragment } from "react";
+"use client";
+
+import { Fragment, useEffect, useMemo, useState } from "react";
 
 type BreakableJaTextProps = {
   text: string;
   className?: string;
+  mode?: "adaptive" | "desktop" | "mobile";
 };
 
-const avoidLineStartTokens = new Set([
+type BreakMode = "desktop" | "mobile";
+
+const avoidLineStartTokensDesktop = new Set([
   "、",
   "。",
   "・",
@@ -49,8 +54,42 @@ const avoidLineStartTokens = new Set([
   "など",
 ]);
 
-function splitIntoSafeChunks(text: string): string[] {
+const avoidLineStartTokensMobile = new Set([
+  ...avoidLineStartTokensDesktop,
+  "する",
+  "した",
+  "して",
+  "いる",
+  "ます",
+  "です",
+]);
+
+const preferredBreakAfterTokens = new Set([
+  "、",
+  "。",
+  "・",
+  "：",
+  "；",
+  "）",
+  "】",
+  "」",
+  "』",
+  "そして",
+  "また",
+  "ただし",
+  "なお",
+  "ため",
+]);
+
+type Chunk = {
+  text: string;
+  canBreakAfter: boolean;
+};
+
+function buildBaseChunks(text: string, mode: BreakMode): string[] {
   const chunks: string[] = [];
+  const avoidLineStartTokens =
+    mode === "mobile" ? avoidLineStartTokensMobile : avoidLineStartTokensDesktop;
 
   if (typeof Intl !== "undefined" && typeof Intl.Segmenter !== "undefined") {
     const segmenter = new Intl.Segmenter("ja", { granularity: "word" });
@@ -89,15 +128,51 @@ function splitIntoSafeChunks(text: string): string[] {
   return chunks;
 }
 
-export default function BreakableJaText({ text, className }: BreakableJaTextProps) {
-  const chunks = splitIntoSafeChunks(text);
+function toBreakableChunks(text: string, mode: BreakMode): Chunk[] {
+  const baseChunks = buildBaseChunks(text, mode);
+  const minCharsForBreak = mode === "mobile" ? 10 : 7;
+
+  return baseChunks.map((chunk) => {
+    const trimmed = chunk.trim();
+    const canBreakAfter =
+      preferredBreakAfterTokens.has(trimmed) ||
+      trimmed.endsWith("。") ||
+      trimmed.endsWith("、") ||
+      trimmed.length >= minCharsForBreak;
+
+    return { text: chunk, canBreakAfter };
+  });
+}
+
+export default function BreakableJaText({
+  text,
+  className,
+  mode = "adaptive",
+}: BreakableJaTextProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (mode !== "adaptive" || typeof window === "undefined") {
+      return;
+    }
+
+    const mediaQuery = window.matchMedia("(max-width: 767px)");
+    const update = () => setIsMobile(mediaQuery.matches);
+    update();
+    mediaQuery.addEventListener("change", update);
+    return () => mediaQuery.removeEventListener("change", update);
+  }, [mode]);
+
+  const effectiveMode: BreakMode =
+    mode === "adaptive" ? (isMobile ? "mobile" : "desktop") : mode;
+  const chunks = useMemo(() => toBreakableChunks(text, effectiveMode), [text, effectiveMode]);
 
   return (
     <span className={className}>
       {chunks.map((chunk, index) => (
-        <Fragment key={`${chunk}-${index}`}>
-          <span style={{ whiteSpace: "nowrap" }}>{chunk}</span>
-          {index < chunks.length - 1 && <wbr />}
+        <Fragment key={`${chunk.text}-${index}`}>
+          <span style={{ whiteSpace: "nowrap" }}>{chunk.text}</span>
+          {index < chunks.length - 1 && chunk.canBreakAfter && <wbr />}
         </Fragment>
       ))}
     </span>
