@@ -108,7 +108,7 @@ export const galleryItems: GalleryItem[] = [
     title: "高級ヘアサロン AIコンシェルジュBot",
     category: "チャットボット",
     description:
-      "24時間365日、予約・変更・キャンセル・各種問い合わせをホテルライクな接客で案内するAIコンシェルジュ。",
+      "24時間365日、丁寧に予約・変更・キャンセルを案内し、落ち着いて各種問い合わせに対応するAIコンシェルジュ。",
     image: "/images/work-02.svg",
     href: "https://udify.app/chat/y5XMIg2Dvp3AsVF4",
   },

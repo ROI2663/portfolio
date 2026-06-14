@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BreakableJaText from "@/components/BreakableJaText";
 import FadeIn from "@/components/FadeIn";
 import { galleryItems } from "@/lib/data";
 
@@ -22,7 +23,7 @@ export default function Gallery() {
                 rel="noopener noreferrer"
                 className="group block overflow-hidden rounded-2xl border border-white/15 transition hover:border-[var(--color-accent)]"
               >
-                <article>
+                <article className="h-full">
                   <div className="relative">
                     <Image
                       src={item.image}
@@ -35,23 +36,25 @@ export default function Gallery() {
                       className="absolute inset-0"
                       style={{
                         background:
-                          "linear-gradient(to top, rgba(6,18,42,0.96) 18%, rgba(6,18,42,0.82) 45%, rgba(6,18,42,0.08) 100%)",
+                          "linear-gradient(to top, rgba(6,18,42,0.72) 10%, rgba(6,18,42,0.35) 45%, rgba(6,18,42,0) 100%)",
                       }}
                     />
-                    <div className="absolute right-4 bottom-4 left-4">
-                      <p className="text-xs tracking-wide text-[var(--color-accent)] uppercase">
-                        {item.category}
+                  </div>
+                  <div className="space-y-2 p-4 sm:p-5">
+                    <p className="text-xs tracking-wide text-[var(--color-accent)] uppercase">
+                      {item.category}
+                    </p>
+                    <h3 className="text-lg leading-7 font-bold">
+                      <BreakableJaText text={item.title} />
+                    </h3>
+                    {item.description && (
+                      <p className="text-sm leading-7 text-[var(--color-muted)]">
+                        <BreakableJaText text={item.description} />
                       </p>
-                      <h3 className="mt-1 text-lg font-bold">{item.title}</h3>
-                      {item.description && (
-                        <p className="mt-2 text-sm leading-6 text-[var(--color-muted)]">
-                          {item.description}
-                        </p>
-                      )}
-                      <p className="mt-3 text-sm font-semibold text-[var(--color-accent)]">
-                        デモを試す →
-                      </p>
-                    </div>
+                    )}
+                    <p className="pt-1 text-sm font-semibold text-[var(--color-accent)]">
+                      デモを試す →
+                    </p>
                   </div>
                 </article>
               </a>
