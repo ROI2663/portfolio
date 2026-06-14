@@ -35,7 +35,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
   }, [isOpen]);
 
   const cardBody = (
-    <article className="h-full">
+    <article className="flex h-full flex-col">
       <div className="relative">
         <Image
           src={item.image}
@@ -52,7 +52,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
           }}
         />
       </div>
-      <div className="space-y-2 p-4 sm:p-5">
+      <div className="flex h-full flex-col space-y-2 p-4 sm:p-5">
         <p className="text-xs tracking-wide text-[var(--color-accent)] uppercase">
           {item.category}
         </p>
@@ -60,11 +60,11 @@ export default function GalleryCard({ item }: GalleryCardProps) {
           <BreakableJaText text={item.title} />
         </h3>
         {item.description && (
-          <p className="text-sm leading-7 text-[var(--color-muted)]">
+          <p className="max-h-24 overflow-hidden text-sm leading-7 text-[var(--color-muted)]">
             <BreakableJaText text={item.description} />
           </p>
         )}
-        <p className="pt-1 text-sm font-semibold text-[var(--color-accent)]">
+        <p className="mt-auto pt-1 text-sm font-semibold text-[var(--color-accent)]">
           {"href" in item ? "デモを試す →" : "デモ動画を見る →"}
         </p>
       </div>
@@ -78,7 +78,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group block overflow-hidden rounded-2xl border border-white/15 transition hover:border-[var(--color-accent)]"
+          className="group block h-[440px] w-full overflow-hidden rounded-2xl border border-white/15 transition hover:border-[var(--color-accent)]"
         >
           {cardBody}
         </a>
@@ -89,7 +89,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
             setVideoError(false);
             setIsOpen(true);
           }}
-          className="group block h-full w-full overflow-hidden rounded-2xl border border-white/15 text-left transition hover:border-[var(--color-accent)]"
+          className="group block h-[440px] w-full overflow-hidden rounded-2xl border border-white/15 text-left transition hover:border-[var(--color-accent)]"
           aria-label={`${item.title}のデモ動画を開く`}
         >
           {cardBody}
