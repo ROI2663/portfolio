@@ -1,3 +1,4 @@
+import BreakableJaText from "@/components/BreakableJaText";
 import FadeIn from "@/components/FadeIn";
 import { stats } from "@/lib/data";
 
@@ -16,7 +17,9 @@ export default function Stats() {
             <FadeIn key={item.title} delay={index * 0.06}>
               <article className="glass-card h-full rounded-2xl border p-6">
                 <h3 className="text-lg font-bold text-[var(--color-accent)]">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-[var(--color-muted)]">{item.detail}</p>
+                <p className="mt-3 text-sm leading-7 text-[var(--color-muted)]">
+                  <BreakableJaText text={item.detail} className="card-copy" />
+                </p>
               </article>
             </FadeIn>
           ))}

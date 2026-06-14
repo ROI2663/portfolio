@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { CircleCheck, Mail, Send, Zap } from "lucide-react";
+import BreakableJaText from "@/components/BreakableJaText";
 import FadeIn from "@/components/FadeIn";
 import { contact, contactHearing } from "@/lib/data";
 
@@ -181,13 +182,13 @@ export default function Contact() {
                 <h3 className="text-lg font-bold">{contactHearing.title}</h3>
               </div>
               <p className="mt-4 text-sm leading-7 text-[var(--color-muted)]">
-                {contactHearing.description}
+                <BreakableJaText text={contactHearing.description} className="card-copy" />
               </p>
               <ul className="mt-5 space-y-3">
                 {contactHearing.highlights.map((item) => (
                   <li key={item} className="flex items-center gap-3 text-sm">
                     <CircleCheck className="size-4 shrink-0 text-emerald-400" />
-                    {item}
+                    <BreakableJaText text={item} className="card-copy" />
                   </li>
                 ))}
               </ul>
