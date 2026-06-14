@@ -182,7 +182,7 @@ export const faqs: FaqItem[] = [
 ];
 
 export const profile = {
-  name: "鳥居 幹広",
+  name: "安田 慶一",
   heading: "生成AIを実務で使える価値に変えるパートナー",
   career:
     "業務改善とWeb制作を軸に、個人事業主から中小企業まで幅広い支援を実施。現場で使われる仕組みを重視し、導入後の定着まで伴走しています。",
@@ -192,11 +192,5 @@ export const profile = {
 };
 
 export const contact = {
-  email: "contact@example.com",
-  phone: "090-1234-5678",
-  sns: [
-    { name: "X", href: "https://x.com/" },
-    { name: "GitHub", href: "https://github.com/" },
-    { name: "LinkedIn", href: "https://www.linkedin.com/" },
-  ],
+  email: "keiichi.yasuda.biz@gmail.com",
 };

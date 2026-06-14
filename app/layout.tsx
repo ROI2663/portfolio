@@ -9,7 +9,7 @@ const notoSansJp = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "AI業務効率化ポートフォリオ | 鳥居幹広",
+  title: "AI業務効率化ポートフォリオ | 安田慶一",
   description:
     "中小企業・個人事業主向けに、AIエージェント構築・業務自動化・チャットボット構築・ホームページ作成を提供するポートフォリオサイトです。",
 };

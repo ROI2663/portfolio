@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { Mail, Phone, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 import { contact } from "@/lib/data";
 
@@ -171,25 +171,7 @@ export default function Contact() {
                   <Mail className="size-4 text-[var(--color-accent)]" />
                   {contact.email}
                 </li>
-                <li className="flex items-center gap-3">
-                  <Phone className="size-4 text-[var(--color-accent)]" />
-                  {contact.phone}
-                </li>
               </ul>
-              <h4 className="mt-8 font-semibold">SNS</h4>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {contact.sns.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-full border border-white/20 px-4 py-2 text-sm transition hover:bg-white/10"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
             </aside>
           </FadeIn>
         </div>

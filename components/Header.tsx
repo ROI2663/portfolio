@@ -11,7 +11,7 @@ export default function Header() {
     <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#071533]/75 backdrop-blur-md">
       <div className="section-container flex h-18 items-center justify-between">
         <a href="#hero" className="text-lg font-black">
-          Torii Portfolio
+          Yasuda Portfolio
         </a>
         <nav className="hidden items-center gap-6 text-sm md:flex">
           {navItems.map((item) => (
