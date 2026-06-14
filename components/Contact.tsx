@@ -1,9 +1,9 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { Mail, Send } from "lucide-react";
+import { CircleCheck, Mail, Send, Zap } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
-import { contact } from "@/lib/data";
+import { contact, contactHearing } from "@/lib/data";
 
 type FormState = {
   name: string;
@@ -163,7 +163,7 @@ export default function Contact() {
             </form>
           </FadeIn>
 
-          <FadeIn delay={0.12}>
+          <FadeIn delay={0.12} className="flex flex-col gap-6">
             <aside className="glass-card rounded-2xl border p-6 md:p-8">
               <h3 className="text-xl font-bold">連絡先</h3>
               <ul className="mt-5 space-y-3 text-[var(--color-muted)]">
@@ -171,6 +171,26 @@ export default function Contact() {
                   <Mail className="size-4 text-[var(--color-accent)]" />
                   {contact.email}
                 </li>
+              </ul>
+            </aside>
+
+            <aside className="glass-card rounded-2xl border p-6 md:p-8">
+              <div className="flex items-center gap-3">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#071533]">
+                  <Zap className="size-5 text-yellow-400" />
+                </span>
+                <h3 className="text-lg font-bold">{contactHearing.title}</h3>
+              </div>
+              <p className="mt-4 text-sm leading-7 text-[var(--color-muted)]">
+                {contactHearing.description}
+              </p>
+              <ul className="mt-5 space-y-3">
+                {contactHearing.highlights.map((item) => (
+                  <li key={item} className="flex items-center gap-3 text-sm">
+                    <CircleCheck className="size-4 shrink-0 text-emerald-400" />
+                    {item}
+                  </li>
+                ))}
               </ul>
             </aside>
           </FadeIn>

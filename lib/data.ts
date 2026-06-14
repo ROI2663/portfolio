@@ -194,3 +194,14 @@ export const profile = {
 export const contact = {
   email: "keiichi.yasuda.biz@gmail.com",
 };
+
+export const contactHearing = {
+  title: "初回ヒアリング無料",
+  description:
+    "AIエージェント構築・業務自動化・チャットボット・ホームページ制作など、ご提供サービスに関するお悩みをお気軽にお聞かせください。現状の課題に合わせ、最適なソリューションをご提案します。",
+  highlights: [
+    "2営業日以内にご返信",
+    "秘密厳守・NDA対応可",
+    "オンラインミーティング対応",
+  ],
+};
