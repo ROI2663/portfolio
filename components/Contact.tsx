@@ -10,6 +10,7 @@ type FormState = {
   email: string;
   company: string;
   message: string;
+  honeypot: string;
 };
 
 const initialForm: FormState = {
@@ -17,22 +18,56 @@ const initialForm: FormState = {
   email: "",
   company: "",
   message: "",
+  honeypot: "",
 };
 
 export default function Contact() {
   const [form, setForm] = useState<FormState>(initialForm);
-  const [status, setStatus] = useState<"idle" | "error" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "error" | "success">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
+    if (status === "submitting") {
+      return;
+    }
+
     if (!form.name || !form.email || !form.message) {
+      setErrorMessage("お名前・メールアドレス・お問い合わせ内容を入力してください。");
       setStatus("error");
       return;
     }
 
-    setStatus("success");
-    setForm(initialForm);
+    setStatus("submitting");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        const result: unknown = await response.json().catch(() => null);
+        const message =
+          result && typeof result === "object" && "message" in result
+            ? String(result.message)
+            : "送信に失敗しました。時間をおいて再度お試しください。";
+        setErrorMessage(message);
+        setStatus("error");
+        return;
+      }
+
+      setStatus("success");
+      setForm(initialForm);
+    } catch {
+      setErrorMessage("送信に失敗しました。時間をおいて再度お試しください。");
+      setStatus("error");
+    }
   };
 
   return (
@@ -92,13 +127,23 @@ export default function Contact() {
                   placeholder="現在の課題や相談したいことをご記入ください。"
                 />
               </label>
+              <input
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                value={form.honeypot}
+                onChange={(event) => setForm((prev) => ({ ...prev, honeypot: event.target.value }))}
+                className="hidden"
+                aria-hidden="true"
+              />
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <button
                   type="submit"
+                  disabled={status === "submitting"}
                   className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent-strong)] px-6 py-3 text-sm font-bold transition hover:brightness-110"
                 >
                   <Send className="size-4" />
-                  送信する
+                  {status === "submitting" ? "送信中..." : "送信する"}
                 </button>
                 <a
                   href={`mailto:${contact.email}`}
@@ -108,9 +153,7 @@ export default function Contact() {
                 </a>
               </div>
               {status === "error" && (
-                <p className="mt-4 text-sm text-red-300">
-                  お名前・メールアドレス・お問い合わせ内容を入力してください。
-                </p>
+                <p className="mt-4 text-sm text-red-300">{errorMessage}</p>
               )}
               {status === "success" && (
                 <p className="mt-4 text-sm text-emerald-300">
