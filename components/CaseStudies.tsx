@@ -9,26 +9,25 @@ export default function CaseStudies() {
         <FadeIn>
           <h2 className="section-title">こんな課題に対応できます</h2>
           <p className="section-lead mt-4">
-            実案件の事例紹介ではなく、<wbr />
-            よくあるお悩みに対して提案できる解決案をご紹介します。
+            実案件の事例紹介ではなく、よくあるお悩みに対して提案できる解決案をご紹介します。
           </p>
         </FadeIn>
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {caseStudies.map((study, index) => (
             <FadeIn key={study.title} delay={index * 0.08}>
-              <article className="glass-card h-full rounded-2xl border p-6">
+              <article className="glass-card flex h-full flex-col rounded-2xl border p-6">
                 <p className="text-sm font-semibold text-[var(--color-accent)]">{study.title}</p>
                 <h3 className="mt-4 text-lg font-bold">よくあるお悩み</h3>
-                <p className="mt-2 leading-7 text-[var(--color-muted)]">
+                <p className="mt-2 min-h-[7rem] leading-7 text-[var(--color-muted)]">
                   <BreakableJaText text={study.challenge} className="card-copy" />
                 </p>
                 <h3 className="mt-5 text-lg font-bold">ご提案できる内容</h3>
-                <p className="mt-2 leading-7 text-[var(--color-muted)]">
+                <p className="mt-2 min-h-[8.5rem] leading-7 text-[var(--color-muted)]">
                   <BreakableJaText text={study.support} className="card-copy" />
                 </p>
                 <a
                   href="#gallery"
-                  className="mt-5 inline-flex text-sm font-semibold text-[var(--color-accent)] transition hover:brightness-110"
+                  className="mt-auto pt-5 inline-flex text-sm font-semibold text-[var(--color-accent)] transition hover:brightness-110"
                 >
                   関連するデモを見る →
                 </a>
