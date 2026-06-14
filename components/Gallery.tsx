@@ -7,10 +7,10 @@ export default function Gallery() {
     <section id="gallery" className="py-16">
       <div className="section-container">
         <FadeIn>
-          <h2 className="section-title">制作実績</h2>
+          <h2 className="section-title">制作デモ・自主制作</h2>
           <p className="section-lead mt-4">
-            制作・導入したチャットbotや業務自動化システムをご紹介します。<wbr />
-            カードをクリックするとデモをお試しいただけます。
+            ここで紹介している内容は、<wbr />
+            実案件ではなく自主制作で検証したデモです。カードから動作イメージをご覧いただけます。
           </p>
         </FadeIn>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

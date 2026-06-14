@@ -7,25 +7,31 @@ export default function CaseStudies() {
     <section id="case-studies" className="py-16">
       <div className="section-container">
         <FadeIn>
-          <h2 className="section-title">導入事例</h2>
+          <h2 className="section-title">こんな課題に対応できます</h2>
           <p className="section-lead mt-4">
-            業種ごとの課題に合わせ、<wbr />
-            現場にフィットする形で改善を実施しています。
+            実案件の事例紹介ではなく、<wbr />
+            よくあるお悩みに対して提案できる解決案をご紹介します。
           </p>
         </FadeIn>
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {caseStudies.map((study, index) => (
-            <FadeIn key={study.industry} delay={index * 0.08}>
+            <FadeIn key={study.title} delay={index * 0.08}>
               <article className="glass-card h-full rounded-2xl border p-6">
-                <p className="text-sm font-semibold text-[var(--color-accent)]">{study.industry}</p>
-                <h3 className="mt-4 text-lg font-bold">課題</h3>
+                <p className="text-sm font-semibold text-[var(--color-accent)]">{study.title}</p>
+                <h3 className="mt-4 text-lg font-bold">よくあるお悩み</h3>
                 <p className="mt-2 leading-7 text-[var(--color-muted)]">
                   <BreakableJaText text={study.challenge} className="card-copy" />
                 </p>
-                <h3 className="mt-5 text-lg font-bold">成果</h3>
+                <h3 className="mt-5 text-lg font-bold">ご提案できる内容</h3>
                 <p className="mt-2 leading-7 text-[var(--color-muted)]">
-                  <BreakableJaText text={study.outcome} className="card-copy" />
+                  <BreakableJaText text={study.support} className="card-copy" />
                 </p>
+                <a
+                  href="#gallery"
+                  className="mt-5 inline-flex text-sm font-semibold text-[var(--color-accent)] transition hover:brightness-110"
+                >
+                  関連するデモを見る →
+                </a>
               </article>
             </FadeIn>
           ))}

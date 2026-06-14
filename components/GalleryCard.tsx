@@ -53,9 +53,12 @@ export default function GalleryCard({ item }: GalleryCardProps) {
         />
       </div>
       <div className="flex h-full flex-col space-y-2 p-4 sm:p-5">
-        <p className="text-xs tracking-wide text-[var(--color-accent)] uppercase">
-          {item.category}
-        </p>
+        <div className="flex flex-wrap items-center gap-2">
+          <p className="text-xs tracking-wide text-[var(--color-accent)] uppercase">{item.category}</p>
+          <span className="rounded-full border border-[var(--color-accent)]/60 px-2 py-0.5 text-[11px] font-semibold text-[var(--color-accent)]">
+            デモ作品
+          </span>
+        </div>
         <h3 className="text-lg leading-7 font-bold">
           <BreakableJaText text={item.title} />
         </h3>

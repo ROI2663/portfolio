@@ -5,15 +5,14 @@ export type ServiceItem = {
 };
 
 export type StatItem = {
-  label: string;
-  value: string;
-  note: string;
+  title: string;
+  detail: string;
 };
 
 export type CaseStudy = {
-  industry: string;
+  title: string;
   challenge: string;
-  outcome: string;
+  support: string;
 };
 
 type GalleryItemBase = {
@@ -28,10 +27,8 @@ export type GalleryItem =
   | (GalleryItemBase & { video: string; href?: never });
 
 export type Testimonial = {
-  name: string;
-  role: string;
-  company: string;
-  comment: string;
+  title: string;
+  description: string;
 };
 
 export type ProcessStep = {
@@ -46,9 +43,10 @@ export type FaqItem = {
 
 export const navItems = [
   { label: "サービス", href: "#services" },
-  { label: "実績", href: "#stats" },
-  { label: "導入事例", href: "#case-studies" },
-  { label: "制作実績", href: "#gallery" },
+  { label: "選ばれる理由", href: "#stats" },
+  { label: "課題別サポート", href: "#case-studies" },
+  { label: "制作デモ", href: "#gallery" },
+  { label: "おすすめの方", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
   { label: "プロフィール", href: "#profile" },
   { label: "お問い合わせ", href: "#contact" },
@@ -82,44 +80,59 @@ export const services: ServiceItem[] = [
 ];
 
 export const stats: StatItem[] = [
-  { label: "導入社数", value: "15社+", note: "中小企業・個人事業主へ導入" },
-  { label: "コスト削減率", value: "平均40%", note: "定型業務の自動化による削減" },
-  { label: "対応時間短縮", value: "60%", note: "問い合わせ一次対応を高速化" },
-  { label: "顧客満足度", value: "98%", note: "導入後アンケート結果" },
+  {
+    title: "現場目線の設計",
+    detail: "導入が目的にならないよう、実際の業務フローに合わせて仕組みを設計します。",
+  },
+  {
+    title: "小さく始めて改善",
+    detail: "いきなり大規模化せず、効果を確認しながら段階的に育てる進め方を重視します。",
+  },
+  {
+    title: "わかりやすい説明",
+    detail: "専門用語をできるだけ使わず、運用イメージが持てる形で丁寧に共有します。",
+  },
+  {
+    title: "オンライン完結",
+    detail: "ヒアリングから納品後のフォローまで、オンラインで全国対応しています。",
+  },
 ];
 
 export const caseStudies: CaseStudy[] = [
   {
-    industry: "製造業",
-    challenge: "在庫報告の入力と集計に毎月20時間以上かかっていた。",
-    outcome: "AI連携の自動集計により、作業時間を月4時間まで短縮。",
+    title: "経費入力の手間を減らしたい",
+    challenge: "レシートや請求書の転記に時間がかかり、月末作業が負担になっている。",
+    support:
+      "画像・PDFから必要項目を抽出し、スプレッドシートへ自動反映する仕組みをご提案できます。",
   },
   {
-    industry: "士業",
-    challenge: "問い合わせ対応が属人化し、初回返信が遅れていた。",
-    outcome: "チャットボット導入で即時回答率が向上し、商談化率が1.4倍に。",
+    title: "問い合わせ対応を効率化したい",
+    challenge: "よくある質問への返信が手作業で、対応品質とスピードにばらつきが出ている。",
+    support:
+      "チャットボットの一次対応を整備し、予約・変更・基本案内の負担を軽減する構成を検討できます。",
   },
   {
-    industry: "小売業",
-    challenge: "複数媒体の売上集計に手間がかかり、意思決定が遅れていた。",
-    outcome: "業務自動化で日次レポートを自動生成し、分析時間を70%削減。",
+    title: "ホームページ経由の相談を増やしたい",
+    challenge: "サイトはあるが導線が弱く、サービスの魅力が伝わりにくい状態になっている。",
+    support:
+      "信頼感のある構成と問い合わせ導線を設計し、集客につながるページ制作をサポートできます。",
   },
 ];
 
 export const galleryItems: GalleryItem[] = [
   {
     title: "カフェ経費処理 業務自動化システム",
-    category: "業務自動化",
+    category: "デモ作品 / 業務自動化",
     description:
-      "レシート・請求書（画像・PDF）をフォルダに置くだけで、AIが日付・取引先・金額・勘定科目を自動抽出し、スプレッドシートの出納帳へ追記。経費入力時間を95%削減し、転記ミスをゼロに。",
+      "レシート・請求書（画像・PDF）をフォルダに置くだけで、AIが日付・取引先・金額・勘定科目を抽出して出納帳へ追記する、自主制作デモです。経費入力を大幅に効率化できる構成を再現しています。",
     image: "/images/work-automation.svg",
     video: "/videos/cafe-automation-demo.mp4",
   },
   {
     title: "ヘアサロン AIコンシェルジュBot",
-    category: "チャットボット",
+    category: "デモ作品 / チャットボット",
     description:
-      "24時間365日、丁寧に予約・変更・キャンセルを案内し、落ち着いて各種問い合わせに対応するAIコンシェルジュ。",
+      "24時間365日で予約・変更・キャンセル案内に対応する導線をまとめた、自主制作チャットボットのデモです。",
     image: "/images/work-02.svg",
     href: "https://udify.app/chat/y5XMIg2Dvp3AsVF4",
   },
@@ -127,25 +140,19 @@ export const galleryItems: GalleryItem[] = [
 
 export const testimonials: Testimonial[] = [
   {
-    name: "山田 太郎",
-    role: "代表取締役",
-    company: "株式会社サンプル製作所",
-    comment:
-      "業務フローを丁寧に理解した上で提案してくれるので、導入後すぐに効果を実感できました。",
+    title: "個人事業主・小規模店舗の方",
+    description:
+      "少人数で日々の業務を回しており、定型作業の負担を減らして本業に集中したい方におすすめです。",
   },
   {
-    name: "佐藤 花子",
-    role: "オーナー",
-    company: "Hanako Design",
-    comment:
-      "問い合わせ対応の負担が大幅に減り、本来のクリエイティブ業務に集中できる時間が増えました。",
+    title: "中小企業のご担当者さま",
+    description:
+      "AI活用を進めたいが何から着手すべきか迷っている場合に、課題整理から伴走できます。",
   },
   {
-    name: "高橋 一郎",
-    role: "営業責任者",
-    company: "タカハシ商事",
-    comment:
-      "数字で成果を確認できる改善提案が分かりやすく、社内への説明もしやすかったです。",
+    title: "IT専任がいないチーム",
+    description:
+      "外注先へ丸投げせず、運用を見据えて一緒に考えながら仕組みを整えたい方に向いています。",
   },
 ];
 
@@ -179,13 +186,23 @@ export const faqs: FaqItem[] = [
     question: "導入後の保守・改善もお願いできますか？",
     answer: "はい。運用状況を見ながら、継続的な改善と追加開発に対応しています。",
   },
+  {
+    question: "実績が少ない段階でも相談できますか？",
+    answer:
+      "はい。現在は副業として活動を始めた段階ですが、自主制作デモをベースに課題整理から丁寧にご提案します。",
+  },
+  {
+    question: "副業での対応体制はどのようになっていますか？",
+    answer:
+      "平日夜と土日を中心に対応しています。事前に進行スケジュールを共有し、メッセージ連絡は迅速に行います。",
+  },
 ];
 
 export const profile = {
   name: "安田 慶一",
   heading: "生成AIを実務で使える価値に変えるパートナー",
   career:
-    "業務改善とWeb制作を軸に、個人事業主から中小企業まで幅広い支援を実施。現場で使われる仕組みを重視し、導入後の定着まで伴走しています。",
+    "業務改善とWeb制作を学びながら、AI活用の仕組みづくりに取り組んでいます。副業として活動を開始し、デモ制作で検証した内容をもとに、小さな改善から伴走します。",
   skills: ["生成AI", "Python", "TypeScript", "Next.js", "業務分析", "UI/UX設計"],
   message:
     "AIは導入することが目的ではなく、日々の仕事が楽になり成果につながることが目的です。実務に根付く仕組みを、一緒に作っていきます。",
