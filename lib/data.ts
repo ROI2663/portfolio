@@ -105,7 +105,7 @@ export const caseStudies: CaseStudy[] = [
 
 export const galleryItems: GalleryItem[] = [
   {
-    title: "高級ヘアサロン AIコンシェルジュBot",
+    title: "ヘアサロン AIコンシェルジュBot",
     category: "チャットボット",
     description:
       "24時間365日、丁寧に予約・変更・キャンセルを案内し、落ち着いて各種問い合わせに対応するAIコンシェルジュ。",
