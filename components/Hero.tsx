@@ -16,7 +16,7 @@ export default function Hero() {
           <p className="mb-5 inline-block rounded-full border border-white/20 px-4 py-1 text-sm text-[var(--color-muted)]">
             中小企業・個人事業主向け AI活用支援
           </p>
-          <h1 className="max-w-full text-[clamp(1.6rem,7.2vw,3rem)] leading-tight font-black sm:max-w-3xl">
+          <h1 className="max-w-full whitespace-nowrap text-[clamp(1.15rem,6.1vw,3rem)] leading-tight font-black">
             AIで、あなたの業務を次のステージへ。
           </h1>
           <p className="mt-6 max-w-2xl text-[clamp(0.98rem,3.9vw,1.125rem)] leading-8 text-[var(--color-muted)]">
