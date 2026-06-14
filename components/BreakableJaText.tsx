@@ -8,6 +8,8 @@ type BreakableJaTextProps = {
 const avoidLineStartTokens = new Set([
   "、",
   "。",
+  "・",
+  "･",
   "，",
   "．",
   ",",
@@ -75,7 +77,7 @@ function splitIntoSafeChunks(text: string): string[] {
   }
 
   // Fallback: keep punctuation/particles attached to the previous chunk.
-  const rough = text.split(/(\s+|、|。|，|．|,|\.|！|？|!|\?|：|；|:|;|）|\)|】|\]|」|』|が|を|に|で|は|へ|と|も|や|の|か|ね|よ|から|まで|より|だけ|しか|など)/g);
+  const rough = text.split(/(\s+|、|。|・|･|，|．|,|\.|！|？|!|\?|：|；|:|;|）|\)|】|\]|」|』|が|を|に|で|は|へ|と|も|や|の|か|ね|よ|から|まで|より|だけ|しか|など)/g);
   for (const token of rough) {
     if (!token) continue;
     if (avoidLineStartTokens.has(token) && chunks.length > 0) {
