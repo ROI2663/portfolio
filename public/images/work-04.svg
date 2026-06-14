@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#102c59" />
+      <stop offset="100%" stop-color="#081a3a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg4)" />
+  <rect x="100" y="75" width="600" height="350" rx="26" fill="#0f2b57" stroke="#9dc2ff" stroke-opacity=".25" />
+  <rect x="140" y="120" width="520" height="70" rx="16" fill="#123364" />
+  <rect x="160" y="145" width="210" height="18" rx="9" fill="#9dc2ff" fill-opacity=".75" />
+  <rect x="140" y="220" width="250" height="160" rx="16" fill="#123364" />
+  <rect x="410" y="220" width="250" height="160" rx="16" fill="#123364" />
+  <circle cx="205" cy="270" r="20" fill="#9dc2ff" fill-opacity=".8" />
+  <circle cx="475" cy="270" r="20" fill="#9dc2ff" fill-opacity=".8" />
+  <rect x="175" y="308" width="180" height="16" rx="8" fill="#cdd8ee" fill-opacity=".45" />
+  <rect x="445" y="308" width="180" height="16" rx="8" fill="#cdd8ee" fill-opacity=".45" />
+  <text x="400" y="405" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="700">
+    ˆ¡·¹Æà
+  </text>
+</svg>

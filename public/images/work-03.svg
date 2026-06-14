@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#173a74" />
+      <stop offset="100%" stop-color="#081a3a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg3)" />
+  <rect x="110" y="85" width="580" height="330" rx="24" fill="#0f2b57" />
+  <rect x="150" y="130" width="500" height="54" rx="12" fill="#081a3a" />
+  <rect x="170" y="146" width="170" height="22" rx="11" fill="#9dc2ff" fill-opacity=".75" />
+  <rect x="150" y="210" width="238" height="150" rx="16" fill="#123364" />
+  <rect x="412" y="210" width="238" height="150" rx="16" fill="#123364" />
+  <rect x="180" y="242" width="170" height="18" rx="9" fill="#cdd8ee" fill-opacity=".45" />
+  <rect x="180" y="272" width="130" height="18" rx="9" fill="#cdd8ee" fill-opacity=".45" />
+  <rect x="442" y="242" width="170" height="18" rx="9" fill="#cdd8ee" fill-opacity=".45" />
+  <rect x="442" y="272" width="130" height="18" rx="9" fill="#cdd8ee" fill-opacity=".45" />
+  <text x="400" y="395" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="700">
+    ‹M\AI¨ü¸§óÈ
+  </text>
+</svg>

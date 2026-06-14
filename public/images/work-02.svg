@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e2f64" />
+      <stop offset="100%" stop-color="#102144" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg2)" />
+  <rect x="100" y="70" width="600" height="360" rx="30" fill="#0f2b57" stroke="#9dc2ff" stroke-opacity=".3" />
+  <circle cx="230" cy="180" r="48" fill="#9dc2ff" fill-opacity=".3" />
+  <circle cx="560" cy="320" r="48" fill="#9dc2ff" fill-opacity=".3" />
+  <rect x="190" y="140" width="330" height="30" rx="15" fill="#9dc2ff" />
+  <rect x="190" y="196" width="380" height="18" rx="9" fill="#cdd8ee" fill-opacity=".5" />
+  <rect x="190" y="228" width="330" height="18" rx="9" fill="#cdd8ee" fill-opacity=".5" />
+  <rect x="190" y="260" width="290" height="18" rx="9" fill="#cdd8ee" fill-opacity=".5" />
+  <text x="400" y="360" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="700">
+    ODè[Í’Bot
+  </text>
+</svg>
