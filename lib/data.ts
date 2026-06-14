@@ -16,13 +16,16 @@ export type CaseStudy = {
   outcome: string;
 };
 
-export type GalleryItem = {
+type GalleryItemBase = {
   title: string;
   category: string;
   description?: string;
   image: string;
-  href: string;
 };
+
+export type GalleryItem =
+  | (GalleryItemBase & { href: string; video?: never })
+  | (GalleryItemBase & { video: string; href?: never });
 
 export type Testimonial = {
   name: string;
@@ -111,6 +114,14 @@ export const galleryItems: GalleryItem[] = [
       "24時間365日、丁寧に予約・変更・キャンセルを案内し、落ち着いて各種問い合わせに対応するAIコンシェルジュ。",
     image: "/images/work-02.svg",
     href: "https://udify.app/chat/y5XMIg2Dvp3AsVF4",
+  },
+  {
+    title: "カフェ経費処理 業務自動化システム",
+    category: "業務自動化",
+    description:
+      "レシート・請求書（画像・PDF）をフォルダに置くだけで、AIが日付・取引先・金額・勘定科目を自動抽出し、スプレッドシートの出納帳へ追記。経費入力時間を95%削減し、転記ミスをゼロに。",
+    image: "/images/work-automation.svg",
+    video: "/videos/cafe-automation-demo.mp4",
   },
 ];
 
