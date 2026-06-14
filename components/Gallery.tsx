@@ -9,8 +9,7 @@ export default function Gallery() {
         <FadeIn>
           <h2 className="section-title">制作デモ・自主制作</h2>
           <p className="section-lead mt-4">
-            ここで紹介している内容は、<wbr />
-            実案件ではなく自主制作で検証したデモです。カードから動作イメージをご覧いただけます。
+            ここで紹介している内容は、実案件ではなく自主制作で検証したデモです。カードから動作イメージをご覧いただけます。
           </p>
         </FadeIn>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

@@ -76,8 +76,7 @@ export default function Contact() {
         <FadeIn>
           <h2 className="section-title">お問い合わせ</h2>
           <p className="section-lead mt-4">
-            ご相談内容が固まっていなくても問題ありません。<wbr />
-            まずは現状の課題をお聞かせください。
+            ご相談内容が固まっていなくても問題ありません。まずは現状の課題をお聞かせください。
           </p>
         </FadeIn>
         <div className="mt-10 grid gap-6 lg:grid-cols-[1.5fr_1fr]">

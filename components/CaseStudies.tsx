@@ -8,10 +8,7 @@ export default function CaseStudies() {
       <div className="section-container">
         <FadeIn>
           <h2 className="section-title">こんな課題に対応できます</h2>
-          <p
-            className="section-lead mt-4"
-            style={{ overflowWrap: "anywhere", wordBreak: "normal", lineBreak: "auto" }}
-          >
+          <p className="section-lead mt-4">
             実案件の事例紹介ではなく、よくあるお悩みに対して提案できる解決案をご紹介します。
           </p>
         </FadeIn>
@@ -21,17 +18,11 @@ export default function CaseStudies() {
               <article className="glass-card flex h-full flex-col rounded-2xl border p-6">
                 <p className="text-sm font-semibold text-[var(--color-accent)]">{study.title}</p>
                 <h3 className="mt-4 text-lg font-bold">よくあるお悩み</h3>
-                <p
-                  className="mt-2 min-h-[7rem] leading-7 text-[var(--color-muted)]"
-                  style={{ overflowWrap: "anywhere", wordBreak: "normal", lineBreak: "auto" }}
-                >
+                <p className="mt-2 min-h-[7rem] leading-7 text-[var(--color-muted)]">
                   <BreakableJaText text={study.challenge} className="card-copy" />
                 </p>
                 <h3 className="mt-5 text-lg font-bold">ご提案できる内容</h3>
-                <p
-                  className="mt-2 min-h-[8.5rem] leading-7 text-[var(--color-muted)]"
-                  style={{ overflowWrap: "anywhere", wordBreak: "normal", lineBreak: "auto" }}
-                >
+                <p className="mt-2 min-h-[8.5rem] leading-7 text-[var(--color-muted)]">
                   <BreakableJaText text={study.support} className="card-copy" />
                 </p>
                 <a

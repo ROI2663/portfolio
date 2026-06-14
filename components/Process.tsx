@@ -10,8 +10,7 @@ export default function Process() {
         <FadeIn>
           <h2 className="section-title">導入の流れ</h2>
           <p className="section-lead mt-4">
-            初回相談から導入後の改善まで、<wbr />
-            伴走しながら進めます。
+            初回相談から導入後の改善まで、伴走しながら進めます。
           </p>
         </FadeIn>
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">

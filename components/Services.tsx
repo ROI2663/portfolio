@@ -17,8 +17,7 @@ export default function Services() {
         <FadeIn>
           <h2 className="section-title">サービス紹介</h2>
           <p className="section-lead mt-4">
-            課題と目的に合わせて、<wbr />
-            必要な施策を組み合わせてご提案します。
+            課題と目的に合わせて、必要な施策を組み合わせてご提案します。
           </p>
         </FadeIn>
         <div className="mt-10 grid gap-5 md:grid-cols-2">

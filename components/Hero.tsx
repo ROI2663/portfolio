@@ -16,14 +16,10 @@ export default function Hero() {
             中小企業・個人事業主向け AI活用支援
           </p>
           <h1 className="max-w-full text-[clamp(1.6rem,7.2vw,3rem)] leading-tight font-black sm:max-w-3xl">
-            AIで、<wbr />
-            あなたの業務を<wbr />
-            次のステージへ。
+            AIで、あなたの業務を次のステージへ。
           </h1>
           <p className="mt-6 max-w-2xl text-[clamp(0.98rem,3.9vw,1.125rem)] leading-8 text-[var(--color-muted)]">
-            AIエージェント構築から業務自動化、<wbr />
-            チャットボット、ホームページ制作まで。<wbr />
-            現場で使える仕組みを作り、毎日の業務を効率化します。
+            AIエージェント構築から業務自動化、チャットボット、ホームページ制作まで。現場で使える仕組みを作り、毎日の業務を効率化します。
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a

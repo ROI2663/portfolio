@@ -15,8 +15,7 @@ export default function FAQ() {
         <FadeIn>
           <h2 className="section-title">よくある質問</h2>
           <p className="section-lead mt-4">
-            ご相談前によくいただく質問をまとめています。<wbr />
-            詳細はお気軽にお問い合わせください。
+            ご相談前によくいただく質問をまとめています。詳細はお気軽にお問い合わせください。
           </p>
         </FadeIn>
         <div className="mt-10 space-y-4">

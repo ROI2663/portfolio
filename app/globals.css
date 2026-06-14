@@ -48,7 +48,7 @@ a {
 }
 
 .section-container :is(h1, h2, h3, p, li, a, button, label, span) {
-  word-break: keep-all;
+  word-break: normal;
   overflow-wrap: normal;
   line-break: strict;
   text-wrap: pretty;
@@ -70,7 +70,7 @@ a {
   line-height: 1.8;
   max-width: 100%;
   text-wrap: pretty;
-  word-break: keep-all;
+  word-break: normal;
   overflow-wrap: normal;
   line-break: strict;
 }
@@ -85,10 +85,34 @@ a {
   backdrop-filter: blur(10px);
 }
 
+.glass-card :is(p, li, span) {
+  word-break: normal;
+  overflow-wrap: normal;
+  line-break: auto;
+  text-wrap: pretty;
+}
+
 .card-copy {
-  word-break: keep-all;
+  word-break: normal;
   overflow-wrap: normal;
   line-break: strict;
+}
+
+@media (max-width: 767px) {
+  .section-container :is(h1, h2, h3, p, li, a, button, label, span) {
+    line-break: auto;
+    text-wrap: wrap;
+  }
+
+  .section-container :is(h1, h2, h3, .section-title) {
+    text-wrap: wrap;
+  }
+
+  .section-lead,
+  .card-copy {
+    line-break: auto;
+    text-wrap: wrap;
+  }
 }
 
 main > section {
