@@ -121,6 +121,14 @@ export const caseStudies: CaseStudy[] = [
 
 export const galleryItems: GalleryItem[] = [
   {
+    title: "カフェ SNS企画 AIエージェント",
+    category: "デモ作品 / AIエージェント",
+    description:
+      "地域の個人経営カフェ・喫茶店を想定し、SNSのネタ探しや競合リサーチを自律化するAIエージェントの自主制作デモです。近隣競合のトレンド分析、季節イベントの先回り、自店メニューの魅力訴求など15種類の企画タスクをバックグラウンドで実行し、店舗ナレッジに基づいた投稿案を月30本自動生成する構成を検証しています。",
+    image: "/images/work-ai-agent.svg",
+    video: "/videos/cafe-ai-agent-demo.mp4",
+  },
+  {
     title: "カフェ経費処理 業務自動化システム",
     category: "デモ作品 / 業務自動化",
     description:

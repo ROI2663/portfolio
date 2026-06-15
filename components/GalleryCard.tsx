@@ -125,7 +125,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
             )}
             {videoError ? (
               <div className="flex aspect-video items-center justify-center rounded-xl border border-dashed border-white/25 bg-black/20 px-4 text-center text-sm text-[var(--color-muted)]">
-                動画を準備中です。`public/videos/cafe-automation-demo.mp4` を配置してください。
+                動画を準備中です。`public{item.video}` を配置してください。
               </div>
             ) : (
               <video
