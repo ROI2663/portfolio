@@ -31,6 +31,11 @@ export default function Services() {
                   <p className="mt-3 leading-7 text-[var(--color-muted)]">
                     <BreakableJaText text={service.description} className="card-copy" />
                   </p>
+                  {service.price && (
+                    <p className="mt-4 text-sm font-bold text-[var(--color-accent)]">
+                      料金目安：{service.price}
+                    </p>
+                  )}
                 </article>
               </FadeIn>
             );

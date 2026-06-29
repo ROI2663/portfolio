@@ -13,15 +13,15 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="glass-card rounded-3xl border px-6 py-14 md:px-12"
         >
-          <p className="mb-5 inline-block rounded-full border border-white/20 px-4 py-1 text-sm text-[var(--color-muted)]">
-            中小企業・個人事業主向け AI活用支援
+          <p className="mb-5 inline-block rounded-full border border-[var(--color-border)] px-4 py-1 text-sm text-[var(--color-muted)]">
+            飲食店・カフェ専門｜AIで経費・レシート入力を自動化
           </p>
           <h1 className="max-w-full whitespace-nowrap text-[clamp(1.15rem,6.1vw,3rem)] leading-tight font-black">
-            AIで、あなたの業務を次のステージへ。
+            レシート入力、AIにまるごとお任せ。
           </h1>
           <p className="mt-6 max-w-2xl text-[clamp(0.98rem,3.9vw,1.125rem)] leading-8 text-[var(--color-muted)]">
             <BreakableJaText
-              text="AIエージェント構築から業務自動化、チャットボット、ホームページ制作まで。現場で使える仕組みを作り、毎日の業務を効率化します。"
+              text="飲食店・カフェの「レシート・領収書の入力」をAIで自動化するのが専門です。業務自動化・チャットボット・データ化は、業種を問わずご相談いただけます。"
               className="card-copy"
             />
           </p>
@@ -34,7 +34,7 @@ export default function Hero() {
             </a>
             <a
               href="#services"
-              className="rounded-full border border-white/25 px-7 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="rounded-full border border-[var(--color-border)] px-7 py-3 text-sm font-semibold text-[var(--color-text)] transition hover:bg-[var(--color-text)]/5"
             >
               サービスを見る
             </a>

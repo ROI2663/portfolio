@@ -81,7 +81,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="group block h-[500px] w-full overflow-hidden rounded-2xl border border-white/15 transition hover:border-[var(--color-accent)]"
+          className="group block h-[500px] w-full overflow-hidden rounded-2xl border border-[var(--color-border)] transition hover:border-[var(--color-accent)]"
         >
           {cardBody}
         </a>
@@ -92,7 +92,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
             setVideoError(false);
             setIsOpen(true);
           }}
-          className="group block h-[500px] w-full overflow-hidden rounded-2xl border border-white/15 text-left transition hover:border-[var(--color-accent)]"
+          className="group block h-[500px] w-full overflow-hidden rounded-2xl border border-[var(--color-border)] text-left transition hover:border-[var(--color-accent)]"
           aria-label={`${item.title}のデモ動画を開く`}
         >
           {cardBody}
@@ -105,7 +105,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
           onClick={() => setIsOpen(false)}
         >
           <div
-            className="w-full max-w-4xl rounded-2xl border border-white/20 bg-[var(--color-bg-elevated)] p-4 sm:p-5"
+            className="w-full max-w-4xl rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)] p-4 sm:p-5"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="mb-3 flex items-start justify-between gap-3">
@@ -113,7 +113,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="rounded-md border border-white/25 px-3 py-1 text-sm text-[var(--color-muted)] transition hover:border-[var(--color-accent)] hover:text-white"
+                className="rounded-md border border-[var(--color-border)] px-3 py-1 text-sm text-[var(--color-muted)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
               >
                 閉じる
               </button>
@@ -124,7 +124,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
               </p>
             )}
             {videoError ? (
-              <div className="flex aspect-video items-center justify-center rounded-xl border border-dashed border-white/25 bg-black/20 px-4 text-center text-sm text-[var(--color-muted)]">
+              <div className="flex aspect-video items-center justify-center rounded-xl border border-dashed border-[var(--color-border)] bg-[var(--color-text)]/5 px-4 text-center text-sm text-[var(--color-muted)]">
                 動画を準備中です。`public{item.video}` を配置してください。
               </div>
             ) : (

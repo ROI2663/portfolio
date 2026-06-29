@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { CircleCheck, Mail, Send, Zap } from "lucide-react";
+import { CircleCheck, Globe, Mail, Send, Zap } from "lucide-react";
 import BreakableJaText from "@/components/BreakableJaText";
 import FadeIn from "@/components/FadeIn";
 import { contact, contactHearing } from "@/lib/data";
@@ -91,7 +91,7 @@ export default function Contact() {
                     onChange={(event) =>
                       setForm((prev) => ({ ...prev, name: event.target.value }))
                     }
-                    className="rounded-xl border border-white/20 bg-white/5 px-4 py-3 outline-none focus:border-[var(--color-accent)]"
+                    className="rounded-xl border border-[var(--color-border)] bg-white/60 px-4 py-3 outline-none focus:border-[var(--color-accent)]"
                     placeholder="山田 太郎"
                   />
                 </label>
@@ -103,7 +103,7 @@ export default function Contact() {
                     onChange={(event) =>
                       setForm((prev) => ({ ...prev, email: event.target.value }))
                     }
-                    className="rounded-xl border border-white/20 bg-white/5 px-4 py-3 outline-none focus:border-[var(--color-accent)]"
+                    className="rounded-xl border border-[var(--color-border)] bg-white/60 px-4 py-3 outline-none focus:border-[var(--color-accent)]"
                     placeholder="example@example.com"
                   />
                 </label>
@@ -113,7 +113,7 @@ export default function Contact() {
                 <input
                   value={form.company}
                   onChange={(event) => setForm((prev) => ({ ...prev, company: event.target.value }))}
-                  className="rounded-xl border border-white/20 bg-white/5 px-4 py-3 outline-none focus:border-[var(--color-accent)]"
+                  className="rounded-xl border border-[var(--color-border)] bg-white/60 px-4 py-3 outline-none focus:border-[var(--color-accent)]"
                   placeholder="株式会社サンプル"
                 />
               </label>
@@ -123,7 +123,7 @@ export default function Contact() {
                   rows={5}
                   value={form.message}
                   onChange={(event) => setForm((prev) => ({ ...prev, message: event.target.value }))}
-                  className="rounded-xl border border-white/20 bg-white/5 px-4 py-3 outline-none focus:border-[var(--color-accent)]"
+                  className="rounded-xl border border-[var(--color-border)] bg-white/60 px-4 py-3 outline-none focus:border-[var(--color-accent)]"
                   placeholder="現在の課題や相談したいことをご記入ください。"
                 />
               </label>
@@ -147,7 +147,7 @@ export default function Contact() {
                 </button>
                 <a
                   href={`mailto:${contact.email}`}
-                  className="rounded-full border border-white/25 px-6 py-3 text-sm font-semibold transition hover:bg-white/10"
+                  className="rounded-full border border-[var(--color-border)] px-6 py-3 text-sm font-semibold transition hover:bg-[var(--color-text)]/5"
                 >
                   メールで直接連絡
                 </a>
@@ -171,12 +171,23 @@ export default function Contact() {
                   <Mail className="size-4 text-[var(--color-accent)]" />
                   {contact.email}
                 </li>
+                <li className="flex items-center gap-3">
+                  <Globe className="size-4 text-[var(--color-accent)]" />
+                  <a
+                    href={contact.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition hover:text-[var(--color-accent)]"
+                  >
+                    @keiichi.yasuda.biz
+                  </a>
+                </li>
               </ul>
             </aside>
 
             <aside className="glass-card rounded-2xl border p-6 md:p-8">
               <div className="flex items-center gap-3">
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#071533]">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#3e2e23]">
                   <Zap className="size-5 text-yellow-400" />
                 </span>
                 <h3 className="text-lg font-bold">{contactHearing.title}</h3>

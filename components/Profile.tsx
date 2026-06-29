@@ -10,7 +10,13 @@ export default function Profile() {
           <h2 className="section-title">プロフィール</h2>
         </FadeIn>
         <FadeIn delay={0.1} className="glass-card mt-8 rounded-3xl border p-6 md:p-10">
-          <p className="text-sm text-[var(--color-accent)]">代表 / AI活用コンサルタント</p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={profile.photo}
+            alt={profile.name}
+            className="mb-6 size-28 rounded-full border border-[var(--color-border)] object-cover"
+          />
+          <p className="text-sm text-[var(--color-accent)]">飲食店・カフェ専門 / AI業務自動化</p>
           <h3 className="mt-2 text-3xl font-black">{profile.name}</h3>
           <p className="mt-4 text-xl font-semibold">{profile.heading}</p>
           <p className="mt-5 leading-8 text-[var(--color-muted)]">
@@ -20,7 +26,7 @@ export default function Profile() {
             {profile.skills.map((skill) => (
               <span
                 key={skill}
-                className="rounded-full border border-white/20 px-4 py-1 text-sm text-[var(--color-muted)]"
+                className="rounded-full border border-[var(--color-border)] px-4 py-1 text-sm text-[var(--color-muted)]"
               >
                 {skill}
               </span>

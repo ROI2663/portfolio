@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #081a3a;
-  --color-bg-elevated: #0f2b57;
-  --color-card: #123364;
-  --color-accent: #9dc2ff;
-  --color-accent-strong: #5b93ff;
-  --color-text: #ffffff;
-  --color-muted: #cdd8ee;
-  --color-border: rgba(255, 255, 255, 0.16);
+  --color-bg: #eddbc9;
+  --color-bg-elevated: #f6ebdc;
+  --color-card: #fbf6ee;
+  --color-accent: #b5702f;
+  --color-accent-strong: #a8682f;
+  --color-text: #3e2e23;
+  --color-muted: #6f5b4a;
+  --color-border: rgba(62, 46, 35, 0.18);
   --page-gutter: clamp(12px, 4vw, 24px);
-  --section-bg-dark: rgba(7, 21, 52, 0.46);
-  --section-bg-light: rgba(226, 238, 255, 0.03);
+  --section-bg-dark: rgba(224, 206, 184, 0.5);
+  --section-bg-light: rgba(251, 246, 238, 0.55);
 }
 
 @theme inline {
@@ -79,10 +79,11 @@ a {
   border: 1px solid var(--color-border);
   background: linear-gradient(
     150deg,
-    rgba(255, 255, 255, 0.08),
-    rgba(255, 255, 255, 0.04)
+    rgba(255, 255, 255, 0.85),
+    rgba(251, 246, 238, 0.62)
   );
   backdrop-filter: blur(10px);
+  box-shadow: 0 10px 28px rgba(62, 46, 35, 0.08);
 }
 
 .glass-card :is(p, li, span) {
