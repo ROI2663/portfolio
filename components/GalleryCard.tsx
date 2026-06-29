@@ -48,7 +48,7 @@ export default function GalleryCard({ item }: GalleryCardProps) {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to top, rgba(6,18,42,0.72) 10%, rgba(6,18,42,0.35) 45%, rgba(6,18,42,0) 100%)",
+              "linear-gradient(to top, rgba(52,37,28,0.55) 10%, rgba(52,37,28,0.22) 45%, rgba(52,37,28,0) 100%)",
           }}
         />
       </div>
