@@ -9,7 +9,7 @@ export default function CaseStudies() {
         <FadeIn>
           <h2 className="section-title">こんな課題に対応できます</h2>
           <p className="section-lead mt-4">
-            実案件の事例紹介ではなく、よくあるお悩みに対して提案できる解決案をご紹介します。
+            よくあるお悩みに対して、具体的な解決策をご提案します。
           </p>
         </FadeIn>
         <div className="mt-10 grid gap-5 lg:grid-cols-3">

@@ -13,7 +13,7 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="glass-card rounded-3xl border px-6 py-14 md:px-12"
         >
-          <p className="mb-5 inline-block rounded-full border border-[var(--color-border)] px-4 py-1 text-sm text-[var(--color-muted)]">
+          <p className="mb-5 inline-block rounded-full border border-[var(--color-accent)]/50 bg-[var(--color-accent)]/10 px-4 py-1 text-sm font-semibold text-[var(--color-accent)]">
             飲食店・カフェ専門｜AIで経費・レシート入力を自動化
           </p>
           <h1 className="max-w-full whitespace-nowrap text-[clamp(1.15rem,6.1vw,3rem)] leading-tight font-black">

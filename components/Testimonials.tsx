@@ -9,7 +9,7 @@ export default function Testimonials() {
         <FadeIn>
           <h2 className="section-title">こんな方におすすめ</h2>
           <p className="section-lead mt-4">
-            副業として活動を始めたばかりのため、今は特に次のような方のご相談に向いています。
+            次のような方のご相談で、特に力を発揮します。
           </p>
         </FadeIn>
         <div className="mt-10 grid gap-5 lg:grid-cols-2 xl:grid-cols-3">

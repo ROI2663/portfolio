@@ -9,7 +9,7 @@ export default function Stats() {
         <FadeIn>
           <h2 className="section-title">選ばれる理由</h2>
           <p className="section-lead mt-4">
-            実績数ではなく、副業開始段階でも安心して相談できる進め方を大切にしています。
+            現場目線で、小さく始めて確実に成果を出す進め方を大切にしています。
           </p>
         </FadeIn>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
