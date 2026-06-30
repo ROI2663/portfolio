@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
+import { SITE_URL } from "@/lib/site";
 
 const notoSansJp = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -9,7 +10,7 @@ const notoSansJp = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-gamma-red-79.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   title: "飲食店・カフェの経費・レシート入力をAIで自動化 | 安田慶一",
   description:
     "飲食店・カフェ専門で、レシート・領収書の入力をAIで自動化します。写真を撮って送るだけで費目ごとに自動で仕分け・記帳。業務自動化・チャットボット・データ化も業種を問わずご相談いただけます。まずはレシート数枚で無料サンプルを。",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     title: "閉店後のレシート入力、AIにまるごとお任せ。｜安田慶一",
     description:
       "飲食店・カフェ専門｜経費・レシート入力をAIで自動化。レシート数枚で無料サンプルをお試しいただけます。",
-    url: "https://portfolio-gamma-red-79.vercel.app",
+    url: SITE_URL,
     siteName: "安田慶一 ポートフォリオ",
     locale: "ja_JP",
     type: "website",
