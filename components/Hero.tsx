@@ -21,7 +21,7 @@ export default function Hero() {
           </h1>
           <p className="mt-6 max-w-2xl text-[clamp(0.98rem,3.9vw,1.125rem)] leading-8 text-[var(--color-muted)]">
             <BreakableJaText
-              text="飲食店・カフェの「レシート・領収書の入力」をAIで自動化するのが専門です。業務自動化・チャットボット・データ化は、業種を問わずご相談いただけます。"
+              text="飲食店・カフェの「レシート・領収書の入力」をAIで自動化するのが専門です。写真を撮って送るだけで費目ごとに自動で仕分け・記帳し、閉店後の手入力をなくします。"
               className="card-copy"
             />
           </p>

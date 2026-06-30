@@ -55,7 +55,7 @@ export const navItems = [
 
 export const services: ServiceItem[] = [
   {
-    title: "レシート・帳票のAI自動データ化【主力】",
+    title: "レシート・帳票のAI自動データ化",
     description:
       "レシート・領収書・請求書を撮って送るだけ。AIが日付・取引先・金額・勘定科目を読み取り、スプレッドシートへ自動で記帳・仕分けします。閉店後の手入力をほぼゼロに。",
     icon: "Workflow",
@@ -78,7 +78,7 @@ export const services: ServiceItem[] = [
   {
     title: "AIエージェント構築",
     description:
-      "リサーチ・情報整理・投稿企画などをこなすAIエージェントを設計します。カフェ経費を軸に、業種を問わずご相談いただけます。",
+      "リサーチ・情報整理・投稿企画などをこなすAIエージェントを設計します。定型業務を任せて、店主が本業に集中できる体制をつくります。",
     icon: "Bot",
     price: "ご相談",
   },
@@ -130,7 +130,7 @@ export const galleryItems: GalleryItem[] = [
     category: "デモ作品 / AIエージェント",
     description:
       "個人経営カフェ向けに、競合リサーチとSNS投稿企画を自律化するAIエージェントのデモです。店舗ナレッジに基づき、投稿案を月30本自動生成します。",
-    image: "/images/work-ai-agent.svg",
+    image: "/images/work-ai-agent.png",
     video: "/videos/cafe-ai-agent-demo.mp4",
   },
   {
@@ -138,7 +138,7 @@ export const galleryItems: GalleryItem[] = [
     category: "デモ作品 / 業務自動化",
     description:
       "レシート・請求書（画像・PDF）をフォルダに置くだけで、AIが日付・取引先・金額・勘定科目を抽出して出納帳へ追記するデモです。経費入力を大幅に効率化できる構成を再現しています。",
-    image: "/images/work-automation.svg",
+    image: "/images/work-automation.png",
     video: "/videos/cafe-automation-demo.mp4",
   },
   {
