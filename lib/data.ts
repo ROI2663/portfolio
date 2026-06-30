@@ -146,7 +146,7 @@ export const galleryItems: GalleryItem[] = [
     category: "デモ作品 / チャットボット",
     description:
       "24時間365日で予約・変更・キャンセル案内に対応する導線をまとめた、チャットボットのデモです。",
-    image: "/images/work-02.svg",
+    image: "/images/work-02.png",
     href: "https://udify.app/chat/y5XMIg2Dvp3AsVF4",
   },
 ];
