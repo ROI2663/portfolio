@@ -76,6 +76,11 @@ a {
   line-break: strict;
 }
 
+/* アクセント色ボタン/バッジの上の文字は必ず白（text-whiteが効かない環境対策） */
+.on-accent {
+  color: #ffffff !important;
+}
+
 .glass-card {
   border: 1px solid var(--color-border);
   background: linear-gradient(

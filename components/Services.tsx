@@ -29,7 +29,7 @@ export default function Services() {
           <article className="glass-card mt-10 rounded-3xl border-2 border-[var(--color-accent)] p-7 md:p-10">
             <div className="flex flex-wrap items-center gap-3">
               <MainIcon className="size-9 text-[var(--color-accent)]" />
-              <span className="rounded-full bg-[var(--color-accent)] px-3 py-1 text-xs font-bold text-white">
+              <span className="on-accent rounded-full bg-[var(--color-accent)] px-3 py-1 text-xs font-bold">
                 主力サービス
               </span>
             </div>

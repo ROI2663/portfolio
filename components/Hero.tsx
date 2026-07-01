@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#contact"
-              className="rounded-full bg-[var(--color-accent-strong)] px-7 py-3 text-sm font-bold text-white transition hover:brightness-110"
+              className="on-accent rounded-full bg-[var(--color-accent-strong)] px-7 py-3 text-sm font-bold transition hover:brightness-110"
             >
               無料相談する
             </a>

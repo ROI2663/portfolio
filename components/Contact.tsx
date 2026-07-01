@@ -140,7 +140,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="inline-flex items-center gap-2 rounded-full bg-[var(--color-accent-strong)] px-6 py-3 text-sm font-bold transition hover:brightness-110"
+                  className="on-accent inline-flex items-center gap-2 rounded-full bg-[var(--color-accent-strong)] px-6 py-3 text-sm font-bold transition hover:brightness-110"
                 >
                   <Send className="size-4" />
                   {status === "submitting" ? "送信中..." : "送信する"}

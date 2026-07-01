@@ -17,7 +17,7 @@ export default function Process() {
           {processSteps.map((step, index) => (
             <FadeIn key={step.title} delay={index * 0.07}>
               <article className="glass-card relative h-full rounded-2xl border p-5">
-                <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-accent-strong)] text-sm font-bold">
+                <div className="on-accent mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-[var(--color-accent-strong)] text-sm font-bold">
                   {index + 1}
                 </div>
                 <h3 className="text-base font-bold">{step.title}</h3>
