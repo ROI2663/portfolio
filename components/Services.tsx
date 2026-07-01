@@ -20,7 +20,7 @@ export default function Services() {
         <FadeIn>
           <h2 className="section-title">サービス紹介</h2>
           <p className="section-lead mt-4">
-            飲食店・カフェの経費・レシート入力の自動化が主力です。
+            手書きアンケート・紙書類のデータ化代行が主力です。
           </p>
         </FadeIn>
 

@@ -14,14 +14,14 @@ export default function Hero() {
           className="glass-card rounded-3xl border px-6 py-14 md:px-12"
         >
           <p className="mb-5 inline-block rounded-full border border-[var(--color-accent)]/50 bg-[var(--color-accent)]/10 px-4 py-1 text-sm font-semibold text-[var(--color-accent)]">
-            飲食店・カフェ専門｜AIで経費・レシート入力を自動化
+            紙・手書き書類のデータ化代行｜写真を送るだけ
           </p>
-          <h1 className="max-w-full whitespace-nowrap text-[clamp(1.15rem,6.1vw,3rem)] leading-tight font-black">
-            レシート入力、AIにまるごとお任せ。
+          <h1 className="max-w-full whitespace-nowrap text-[clamp(1.05rem,5.6vw,2.9rem)] leading-tight font-black">
+            手書きアンケート、送るだけでExcelに。
           </h1>
           <p className="mt-6 max-w-2xl text-[clamp(0.98rem,3.9vw,1.125rem)] leading-8 text-[var(--color-muted)]">
             <BreakableJaText
-              text="飲食店・カフェの「レシート・領収書の入力」をAIで自動化するのが専門です。写真を撮って送るだけで費目ごとに自動で仕分け・記帳し、閉店後の手入力をなくします。"
+              text="セミナー・研修の手書きアンケートも、店舗のレシートも。写真やスキャンを送るだけで、AIが一枚ずつ正確にデータ化し、集計まで仕上げてお返しします。"
               className="card-copy"
             />
           </p>

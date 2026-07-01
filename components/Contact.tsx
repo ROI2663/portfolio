@@ -187,7 +187,7 @@ export default function Contact() {
 
             <aside className="glass-card rounded-2xl border p-6 md:p-8">
               <div className="flex items-center gap-3">
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#3e2e23]">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#182f4e]">
                   <Zap className="size-5 text-yellow-400" />
                 </span>
                 <h3 className="text-lg font-bold">{contactHearing.title}</h3>

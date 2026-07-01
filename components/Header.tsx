@@ -8,7 +8,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-[var(--color-border)] bg-[#eddbc9]/80 backdrop-blur-md">
+    <header className="fixed top-0 z-50 w-full border-b border-[var(--color-border)] bg-[#f2f6fb]/85 backdrop-blur-md">
       <div className="section-container flex h-18 items-center justify-between">
         <a href="#hero" className="text-lg font-black">
           Yasuda Portfolio
